@@ -1,0 +1,51 @@
+body {
+    font-family: "Heboo", sans-serif;
+}
+:root {
+    --Blue-color: #4d41be;
+    --Navy-color: #34425d;
+    --Btn-color: #564bff;
+}
+/*Start Navbar*/
+nav .navbar-brand img {
+    height: 40px;
+    width: 80px;
+}
+nav button[class*="navbar-toggler"] {
+    border-color: var(--Navy-color);
+    color: var(--Navy-color);
+}
+nav button[class*="navbar-toggler"]:focus {
+    box-shadow: none;
+}
+nav ul li {
+    width: fit-content;
+}
+nav ul li a {
+    color: var(--Navy-color)!important;
+}
+nav ul li a::after {
+    content: "";
+    position: absolute;
+    width: calc(100% - 2rem);
+    height: 1px;
+    background-color: var(--Blue-color);
+    left: 50%;
+    bottom: 0.5rem;
+    transform: translateX(-50%);
+    display: none;
+}
+nav ul li a[class*="active"],
+nav ul li a:hover{
+    color: var(--Blue-color)!important;
+}
+nav ul li a:hover::after {
+    display: block;
+}
+nav .phone {
+    background-color: var(--Btn-color);
+}
+nav .phone:hover {
+    background-color: var(--Blue-color);
+}
+/*End Navbar*/

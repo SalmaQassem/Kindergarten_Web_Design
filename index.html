@@ -14,11 +14,49 @@
     <link rel="stylesheet" href="CSS/style.css" />
     <!--Normalize Css File-->
     <link rel="stylesheet" href="CSS/normalize.css" />
+    <!--Fonts Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<body>
-
+<body id="Home">
+<nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+        <a class="navbar-brand" href="#Home">
+            <img src="images/logo.png" alt="">
+        </a>
+        <button class="navbar-toggler rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse flex-lg-grow-0" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
+                <li class="nav-item">
+                    <a class="sa nav-link active px-3 p-lg-3 text-capitalize position-relative" aria-current="page" href="#Home">home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">events</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">teachers</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">pages</a>
+                </li>
+            </ul>
+        </div>
+        <a class="phone btn text-white d-none d-lg-inline-block" href="#Home" role="button">
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>+1 516 231 1313</span>
+        </a>
+    </div>
+</nav>
+<script src="JS/bootstrap.bundle.min.js"></script>
+<script src="JS/all.min.js"></script>
 </body>
 </html>
