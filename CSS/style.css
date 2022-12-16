@@ -5,6 +5,7 @@ body {
     --Blue-color: #4d41be;
     --Navy-color: #34425d;
     --Btn-color: #564bff;
+    --Orange-color: #ffa847;
 }
 /*Start Navbar*/
 nav .navbar-brand img {
@@ -49,3 +50,24 @@ nav .phone:hover {
     background-color: var(--Blue-color);
 }
 /*End Navbar*/
+
+/*Start Landing*/
+.landing {
+    height: calc(100vh - 72px);
+}
+.landing .row {
+    background-color: var(--Navy-color);
+}
+.landing .playCircle {
+    width: 40px;
+    height: 40px;
+    color: var(--Orange-color);
+    border-color: var(--Orange-color)!important;
+}
+.landing .btn {
+    font-size: 13px;
+}
+.landing .apply {
+    color: var(--Navy-color)!important;
+}
+/*End Landing*/
