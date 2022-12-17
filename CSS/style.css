@@ -6,6 +6,8 @@ body {
     --Navy-color: #34425d;
     --Btn-color: #564bff;
     --Orange-color: #ffa847;
+    --Red-color: #ed5864;
+
 }
 /*Start Navbar*/
 nav .navbar-brand img {
@@ -71,3 +73,42 @@ nav .phone:hover {
     color: var(--Navy-color)!important;
 }
 /*End Landing*/
+
+/*Start Work Culture*/
+.WorkC video {
+    outline: 15px solid var(--Navy-color);
+}
+.WorkC .playVideo {
+    background-color: var(--Blue-color);
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.WorkC h6 {
+    color: var(--Blue-color);
+}
+.WorkC .des {
+    font-size: 14px;
+}
+.WorkC ul li svg {
+   color: var(--Blue-color);
+    font-size: 13px;
+}
+.WorkC ul li span {
+    font-size: 14px;
+}
+.WorkC .start {
+    color: var(--Red-color);
+}
+.WorkC .start::after {
+    content: "";
+    position: absolute;
+    width: 45px;
+    height: 2px;
+    background-color: var(--Red-color);
+    left: 0;
+    bottom: -4px;
+}
+/*End Work Culture*/
