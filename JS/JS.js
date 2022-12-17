@@ -1,3 +1,4 @@
+/*Start play video button*/
 document.getElementById("playVideo").onclick = function () {
     document.getElementById("video").play();
     document.getElementById("playVideo").style.visibility = "hidden";
@@ -8,3 +9,4 @@ document.getElementById("video").onclick = function () {
         document.getElementById("playVideo").style.visibility = "initial";
     }
 };
+/*End play video button*/

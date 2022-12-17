@@ -1,25 +1,35 @@
 body {
-    font-family: "Heboo", sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 :root {
-    --Blue-color: #4d41be;
-    --Navy-color: #34425d;
+    --Blue-color: #564fff;
+    --Navy-color: #33415c;
     --Btn-color: #564bff;
     --Orange-color: #ffa847;
     --Red-color: #ed5864;
-
 }
 /*Start Navbar*/
 nav .navbar-brand img {
-    height: 40px;
-    width: 80px;
+    height: 30px;
+    width: 100px;
 }
 nav button[class*="navbar-toggler"] {
-    border-color: var(--Navy-color);
-    color: var(--Navy-color);
+    width: 30px;
+    height: 27px;
+    color: var(--Orange-color);
 }
 nav button[class*="navbar-toggler"]:focus {
     box-shadow: none;
+}
+nav button[class*="navbar-toggler"] > div {
+    height: 3px;
+    background-color: var(--Orange-color);
+}
+nav button[class*="navbar-toggler"] > div:nth-child(2){
+    width: 26px;
+}
+nav button[class*="navbar-toggler"] > div:nth-child(3) {
+    width: 23px;
 }
 nav ul li {
     width: fit-content;
@@ -30,20 +40,31 @@ nav ul li a {
 nav ul li a::after {
     content: "";
     position: absolute;
-    width: calc(100% - 2rem);
-    height: 1px;
+    width: 0;
+    height: 3px;
     background-color: var(--Blue-color);
-    left: 50%;
+    left: 1rem;
     bottom: 0.5rem;
-    transform: translateX(-50%);
-    display: none;
+    transition: 0.3s;
 }
 nav ul li a[class*="active"],
 nav ul li a:hover{
     color: var(--Blue-color)!important;
 }
 nav ul li a:hover::after {
-    display: block;
+    width: calc(100% - 2rem);
+}
+nav .btn-close {
+    width: 40px;
+    height: 40px;
+    box-sizing: border-box;
+    right: 24px;
+    background-image: none;
+    color: var(--Orange-color)!important;
+    border-color: var(--Orange-color)!important;
+}
+nav .btn-close:focus {
+    box-shadow: none;
 }
 nav .phone {
     background-color: var(--Btn-color);
@@ -54,23 +75,73 @@ nav .phone:hover {
 /*End Navbar*/
 
 /*Start Landing*/
-.landing {
-    height: calc(100vh - 72px);
-}
 .landing .row {
     background-color: var(--Navy-color);
 }
 .landing .playCircle {
-    width: 40px;
-    height: 40px;
+    width: 65px;
+    height: 65px;
     color: var(--Orange-color);
     border-color: var(--Orange-color)!important;
 }
-.landing .btn {
-    font-size: 13px;
+@media (max-width: 576px) {
+    .landing h1 {
+        font-size: 36px;
+    }
+    .landing h1 span {
+        font-size: 36px;
+    }
 }
-.landing .apply {
-    color: var(--Navy-color)!important;
+@media (max-width: 768px) and (min-width: 576px) {
+    .landing h1 {
+        font-size: 50px;
+    }
+    .landing h1 span {
+        font-size: 48px;
+    }
+}
+@media (min-width: 768px) {
+    .landing h1 {
+        font-size: 70px;
+    }
+    .landing h1 span {
+        font-size: 48px;
+    }
+}
+.landing .btn {
+    width: 148px;
+    height: 50px;
+}
+.landing .apply,
+.learn {
+    z-index: 1;
+}
+.landing .apply > div:empty,
+.landing .learn > div:empty {
+    width: 0;
+    background-color: var(--Blue-color);
+    border-radius: 0.25rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.3s;
+    z-index: -1;
+}
+.landing .apply > svg,
+.landing .learn > svg {
+    transition: 0.3s;
+}
+.landing .apply:hover,
+.landing .learn:hover {
+    border-color: var(--Blue-color)!important;
+}
+.landing .apply:hover > div:empty,
+.landing .learn:hover > div:empty {
+    width: 100%;
+}
+.landing .apply:hover > svg,
+.landing .learn:hover > svg {
+    transform: translateX(4px);
 }
 /*End Landing*/
 

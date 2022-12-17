@@ -17,18 +17,23 @@
     <!--Fonts Link-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
 </head>
 <body id="Home">
-<nav class="navbar navbar-expand-lg">
+<nav class="navbar navbar-expand-lg sticky-top bg-white">
     <div class="container">
         <a class="navbar-brand" href="#Home">
             <img src="images/logo.png" alt="">
         </a>
-        <button class="navbar-toggler rounded-1" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <i class="fa-solid fa-bars"></i>
+        <button class="navbar-toggler border-0 p-0" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-expanded="false" aria-label="Toggle navigation">
+            <div class="rounded-pill w-100 mb-1"></div>
+            <div class="rounded-pill mb-1 ms-auto"></div>
+            <div class="rounded-pill ms-auto"></div>
         </button>
-        <div class="collapse navbar-collapse flex-lg-grow-0" id="navbarSupportedContent">
+        <div class="offcanvas offcanvas-end flex-lg-grow-0 py-5 px-4 p-lg-0 w-100" id="offcanvasNavbar">
+            <button type="button" class="btn-close fs-5 d-lg-none position-absolute border rounded-circle opacity-100" data-bs-dismiss="offcanvas" aria-label="Close">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
             <ul class="navbar-nav me-auto mb-2 mb-lg-0 fw-bold">
                 <li class="nav-item">
                     <a class="sa nav-link active px-3 p-lg-3 text-capitalize position-relative" aria-current="page" href="#Home">home</a>
@@ -37,18 +42,24 @@
                     <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">events</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">classes</a>
-                </li>
-                <li class="nav-item">
                     <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">teachers</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">blog</a>
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">classes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">about us</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">contact</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link px-3 p-lg-3 text-capitalize position-relative" href="#">pages</a>
                 </li>
             </ul>
+            <!--
+                <i class="fa-solid fa-xmark"></i>
+                -->
         </div>
         <a class="phone btn text-white d-none d-lg-inline-block" href="#Home" role="button">
             <i class="fa-brands fa-whatsapp"></i>
@@ -57,31 +68,31 @@
     </div>
 </nav>
 <section class="landing">
-    <div class="container h-100">
-        <div class="row p-3 p-lg-5 m-0 align-items-center w-100 h-100 rounded-4">
-            <div class="col-6 text-white p-lg-5">
-                <div class="playCircle d-flex justify-content-center align-items-center border rounded-circle mb-4">
-                    <i class="fa-solid fa-play"></i>
-                </div>
-                <h4 class="text-capitalize fw-bold">we are child care</h4>
-                <h2 class="text-capitalize fw-bold fs-1">Professional</h2>
-                <p class="lh-base mb-lg-5">You must know that there is nothing higher and stronger and more wholesome and good for life in the future than some good memory, specially a memory of childhood.</p>
-                <div>
-                    <a class="apply btn rounded-1 bg-white mb-3 me-lg-3 me-md-3" href="#" role="button">
-                        <span class="text-capitalize fw-bold me-1">apply now</span>
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </a>
-                    <a class="learn btn rounded-1 bg-transparent border-white mb-3" href="#" role="button">
-                        <span class="text-capitalize text-white fw-bold me-1">learn more</span>
-                        <i class="fa-solid fa-arrow-right text-white"></i>
-                    </a>
-                </div>
+    <div class="row py-5 px-lg-0 px-md-5 m-0 align-items-center w-100 h-100 rounded-4">
+        <div class="col-lg-6 text-white px-5 order-1 order-lg-0 d-flex flex-column align-items-center align-items-sm-start text-center text-sm-start">
+            <div class="playCircle mt-5 mt-lg-0 d-flex justify-content-center align-items-center border rounded-circle">
+                <i class="fa-solid fa-play fs-3"></i>
             </div>
-            <div class="col-6 image p-0">
-                <img src="images/landing.png" class="w-100 h-100">
+            <h1 class="text-capitalize fw-bold mb-0 mt-3 mt-md-0">
+                <span>we are child care</span> Professional
+            </h1>
+            <p class="lh-lg mb-4 mt-2 mb-sm-5 mt-sm-4">You must know that there is nothing higher and stronger and more wholesome and good for life in the future than some good memory, specially a memory of childhood.</p>
+            <div class="row gap-4 w-100 m-0 justify-content-center justify-content-sm-start">
+                <a class="apply btn rounded-1 bg-transparent border-white position-relative d-inline-flex align-items-center justify-content-center" href="#" role="button">
+                    <div class="h-100 position-absolute"></div>
+                    <span class="text-capitalize text-white fw-bold me-3 ">apply now</span>
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </a>
+                <a class="learn btn rounded-1 bg-transparent border-white position-relative d-inline-flex align-items-center justify-content-center" href="#" role="button">
+                    <div class="h-100 position-absolute"></div>
+                    <span class="text-capitalize text-white fw-bold me-3">learn more</span>
+                    <i class="fa-solid fa-arrow-right text-white"></i>
+                </a>
             </div>
         </div>
-
+        <div class="image col-lg-6 px-5 order-0 order-lg-1">
+            <img src="images/landing.png" class="w-100 h-auto">
+        </div>
     </div>
 </section>
 <section class="WorkC">
