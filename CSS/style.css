@@ -1,12 +1,13 @@
 body {
     font-family: "Roboto", sans-serif;
+    color: #383838;
 }
 :root {
     --Blue-color: #564fff;
     --Navy-color: #33415c;
     --Btn-color: #564bff;
     --Orange-color: #ffa847;
-    --Red-color: #ed5864;
+    --Red-color: #ff564f;
 }
 /*Start Navbar*/
 nav .navbar-brand img {
@@ -69,8 +70,9 @@ nav .btn-close:focus {
 nav .phone {
     background-color: var(--Btn-color);
 }
-nav .phone:hover {
-    background-color: var(--Blue-color);
+nav .phone:hover,
+nav .phone:focus{
+    background-color: var(--Blue-color)!important;
 }
 /*End Navbar*/
 
@@ -146,8 +148,9 @@ nav .phone:hover {
 /*End Landing*/
 
 /*Start Work Culture*/
-.WorkC video {
-    outline: 15px solid var(--Navy-color);
+.WorkC .vid {
+    background-color: var(--Navy-color);
+    padding: 20px;
 }
 .WorkC .playVideo {
     background-color: var(--Blue-color);
@@ -157,18 +160,38 @@ nav .phone:hover {
     top: 50%;
     transform: translate(-50%, -50%);
 }
-.WorkC h6 {
-    color: var(--Blue-color);
+.WorkC .playVideo:hover {
+    background-color: var(--Red-color);
 }
-.WorkC .des {
-    font-size: 14px;
+.WorkC .title {
+    color: var(--Blue-color);
+    padding-bottom: 5px;
+}
+.WorkC .sub-tile {
+    padding-bottom: 12px;
+}
+@media (max-width: 576px) {
+    .WorkC .sub-tile {
+        font-size: 26px;
+    }
+}
+@media (min-width: 576px) {
+    .WorkC .sub-tile {
+        font-size: 35px;
+        line-height: 45px;
+    }
+}
+@media (min-width: 768px) {
+    .WorkC .sub-tile {
+        font-size: 48px;
+        line-height: 56px;
+    }
+}
+.WorkC .ques {
+    padding-top: 28px;
 }
 .WorkC ul li svg {
    color: var(--Blue-color);
-    font-size: 13px;
-}
-.WorkC ul li span {
-    font-size: 14px;
 }
 .WorkC .start {
     color: var(--Red-color);
