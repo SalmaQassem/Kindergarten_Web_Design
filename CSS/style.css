@@ -285,7 +285,11 @@ nav .phone:focus{
     background-color: var(--Blue-color);
 }
 .Classes .red-btn {
-    color: var(--Red-color);
+    color: var(--Red-color)!important;
+}
+.Classes .red-btn:hover {
+    outline: none;
+    border: none;
 }
 .Classes .red-btn::after {
     content: "";
@@ -297,13 +301,13 @@ nav .phone:focus{
     bottom: -3px;
     transition: 0.3s;
 }
+.Classes .red-btn:hover::after {
+    width: calc(100% - 15px);
+}
 .Classes .red-btn svg {
     font-size: 13px;
     transition: 0.3s;
     margin-left: 30px;
-}
-.Classes .red-btn:hover::after {
-    width: calc(100% - 15px);
 }
 .Classes .red-btn:hover > svg {
     transform: translateX(-15px);
