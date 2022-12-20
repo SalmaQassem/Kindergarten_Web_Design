@@ -8,6 +8,7 @@ body {
     --Btn-color: #564bff;
     --Orange-color: #ffa847;
     --Red-color: #ff564f;
+    --Green-color: #235c51;
 }
 /*Start Components*/
 @media (max-width: 576px) {
@@ -26,7 +27,6 @@ body {
     }
 }
 .title {
-    color: var(--Blue-color);
     padding-bottom: 5px;
 }
 .sub-tile {
@@ -48,6 +48,17 @@ body {
         font-size: 48px;
         line-height: 56px;
     }
+}
+.playVideo {
+    width: 50px;
+    height: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.playVideo:hover {
+    background-color: var(--Red-color)!important;
+    color: white!important;
 }
 .main-btn {
     height: 50px;
@@ -206,14 +217,10 @@ nav .phone:focus{
 }
 .WorkC .playVideo {
     background-color: var(--Blue-color);
-    width: 50px;
-    height: 50px;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    color: white;
 }
-.WorkC .playVideo:hover {
-    background-color: var(--Red-color);
+.WorkC .title {
+    color: var(--Blue-color);
 }
 .WorkC .ques {
     padding-top: 28px;
@@ -340,3 +347,68 @@ nav .phone:focus{
     transform: scale(1);
 }
 /*End Classes*/
+
+/*Start Events*/
+video {
+    object-fit: fill;
+}
+.Events .playVideo {
+    background-color: white;
+    color: var(--Navy-color);
+}
+.Events > div > div:nth-child(2) {
+    background-color: var(--Green-color);
+}
+@media (max-width: 576px) {
+    .Events > div > div:nth-child(2) {
+        padding: 56px 28px;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px){
+    .Events > div > div:nth-child(2) {
+        padding: 80px 116px;
+    }
+}
+@media (min-width: 768px){
+    .Events > div > div:nth-child(2) {
+        padding: 80px 62px;
+    }
+}
+.Events ul {
+    overflow: inherit;
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .Events ul {
+        overflow: scroll;
+    }
+}
+.Events ul li {
+    padding-top: 35px;
+}
+.Events ul li span {
+    background-color: white;
+    color: var(--Green-color);
+}
+@media (max-width: 768px) {
+    .Events ul li span {
+        width: 60px;
+        height: 60px;
+    }
+}
+@media (min-width: 768px) {
+    .Events ul li span {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media (max-width: 576px) {
+    .Events ul li .text {
+        width: 100%;
+    }
+}
+@media (min-width: 576px) {
+    .Events ul li .text {
+        width: 80%;
+    }
+}
+/*End Events*/
