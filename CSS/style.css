@@ -27,6 +27,7 @@ body {
     }
 }
 .title {
+    color: var(--Blue-color);
     padding-bottom: 5px;
 }
 .sub-tile {
@@ -49,6 +50,40 @@ body {
         line-height: 56px;
     }
 }
+@media (max-width: 768px) {
+    .des {
+        margin-bottom: 40px;
+    }
+}
+@media (min-width: 768px) {
+    .des {
+        margin-bottom: 60px;
+    }
+}
+.start {
+    color: var(--Red-color);
+    transition: 0.3s;
+}
+.start::after {
+    content: "";
+    position: absolute;
+    width: 35%;
+    height: 3px;
+    background-color: var(--Red-color);
+    left: 0;
+    bottom: -3px;
+    transition: 0.3s;
+}
+.start:hover {
+    color: var(--Red-color);
+    letter-spacing: 2px;
+}
+.start:hover::after {
+    width: 100%;
+}
+video {
+    object-fit: fill;
+}
 .playVideo {
     width: 50px;
     height: 50px;
@@ -62,17 +97,25 @@ body {
 }
 .main-btn {
     height: 50px;
-    border: 2px solid;
+    border: 2px solid var(--Navy-color);
     z-index: 1;
 }
-.Classes .main-btn::after {
+.main-btn:hover {
+    color: white;
+    border-color: var(--Navy-color);
+}
+.main-btn::after {
     content: "";
     position: absolute;
     width: calc(100% + 2px);
     height: 100%;
+    background-color: var(--Navy-color);
     z-index: -1;
     transform: scale(0);
     transition: 0.3s;
+}
+.main-btn:hover::after {
+    transform: scale(1);
 }
 /*End Components*/
 
@@ -228,33 +271,12 @@ nav .phone:focus{
 .WorkC ul li svg {
    color: var(--Blue-color);
 }
-.WorkC .start {
-    color: var(--Red-color);
-}
-.WorkC .start::after {
-    content: "";
-    position: absolute;
-    width: 45px;
-    height: 2px;
-    background-color: var(--Red-color);
-    left: 0;
-    bottom: -4px;
-}
 /*End Work Culture*/
 
 /*Start Classes*/
-@media (max-width: 768px) {
-    .Classes .des {
-        margin-bottom: 40px;
-    }
-}
-@media (min-width: 768px) {
-    .Classes .des {
-        margin-bottom: 60px;
-    }
-}
 .Classes img {
     height: 295px;
+    object-fit: cover;
 }
 .Classes .card {
     z-index: 1;
@@ -319,9 +341,6 @@ nav .phone:focus{
 .Classes .red-btn:hover > svg {
     transform: translateX(-15px);
 }
-.Classes .main-btn {
-    border-color: var(--Navy-color);
-}
 @media (max-width: 576px){
     .Classes .main-btn {
         width: 100%;
@@ -337,20 +356,11 @@ nav .phone:focus{
         width: 26%;
     }
 }
-.Classes .main-btn::after {
-    background-color: var(--Navy-color);
-}
-.Classes .main-btn:hover {
-    color: white;
-}
-.Classes .main-btn:hover::after {
-    transform: scale(1);
-}
 /*End Classes*/
 
 /*Start Events*/
-video {
-    object-fit: fill;
+.Events .title {
+    color: white;
 }
 .Events .playVideo {
     background-color: white;
@@ -412,3 +422,75 @@ video {
     }
 }
 /*End Events*/
+
+/*Start Teachers*/
+.Teachers .card-holder {
+    height: 360px;
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+.Teachers .card:hover {
+    border-radius: 0;
+}
+.Teachers .card-img {
+    transition: 0.3s;
+    object-fit: cover;
+}
+.Teachers .card-img:hover {
+    transform: scale(1.1);
+    border-radius: 0;
+}
+.Teachers .card-img-overlay {
+    width: 65%;
+    height: 20%;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    transition: 0.3s;
+}
+.Teachers .card-img-overlay:hover {
+    height: 28%;
+}
+.Teachers .card-img-overlay:hover > .overlay-contents {
+    transform: translateY(0);
+}
+.Teachers .card-img-overlay:hover > .overlay-contents > ul {
+    visibility: visible!important;
+}
+.Teachers .overlay-contents {
+    transform: translateY(18px);
+    transition: 0.3s;
+}
+.Teachers .overlay-contents ul li svg {
+    font-size: 14px;
+}
+.Teachers .card-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.Teachers .card-text {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+@media (max-width: 768px){
+    .Teachers .main-btn {
+        width: 56%;
+        margin: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .Teachers .main-btn {
+        width: 30%;
+        margin: 0 20px;
+    }
+}
+@media (min-width: 992px) {
+    .Teachers .main-btn {
+        width: 18%;
+        margin: 0 20px;
+    }
+}
+.Teachers .start {
+    width: 70px;
+}
+/*End Teachers*/
