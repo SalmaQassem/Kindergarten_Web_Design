@@ -97,25 +97,44 @@ video {
 }
 .main-btn {
     height: 50px;
-    border: 2px solid var(--Navy-color);
     z-index: 1;
-}
-.main-btn:hover {
-    color: white;
-    border-color: var(--Navy-color);
 }
 .main-btn::after {
     content: "";
     position: absolute;
-    width: calc(100% + 2px);
-    height: 100%;
-    background-color: var(--Navy-color);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
     z-index: -1;
     transform: scale(0);
     transition: 0.3s;
 }
 .main-btn:hover::after {
     transform: scale(1);
+}
+.navy-btn {
+    border: 2px solid var(--Navy-color);
+}
+.navy-btn:hover {
+    color: white;
+    border-color: var(--Navy-color);
+}
+.navy-btn::after {
+    background-color: var(--Navy-color);
+}
+@media (max-width: 576px) {
+    .info {
+        padding: 50px 0;
+    }
+}
+@media (min-width: 576px) {
+    .info {
+        padding: 60px 0;
+    }
+}
+@media (min-width: 992px) {
+    .info {
+        padding: 100px 55px;
+    }
 }
 /*End Components*/
 
@@ -341,12 +360,7 @@ nav .phone:focus{
 .Classes .red-btn:hover > svg {
     transform: translateX(-15px);
 }
-@media (max-width: 576px){
-    .Classes .main-btn {
-        width: 100%;
-    }
-}
-@media (min-width: 576px) and (max-width: 992px){
+@media (max-width: 992px){
     .Classes .main-btn {
         width: 50%;
     }
@@ -494,3 +508,49 @@ nav .phone:focus{
     width: 70px;
 }
 /*End Teachers*/
+
+/*Start Call*/
+.Call .columns{
+    background-color: var(--Navy-color);
+}
+.Call .call-img img {
+    transform: scale(1.25)translate(5%,-11%);
+}
+.Call .parents-img img {
+    transform: scale(0.6)translate(20%, 7%);
+}
+.Call .title {
+    color: var(--Orange-color);
+}
+.Call .sub-tile {
+    color: white;
+    padding-bottom: 35px;
+}
+.Call .main-btn {
+    border: 2px solid white;
+    color: white;
+    background-color: var(--Navy-color);
+}
+.Call .main-btn:hover {
+    color: var(--Navy-color);
+    border-color: white;
+}
+.Call .main-btn::after {
+    background-color: white;
+}
+@media (max-width: 768px){
+    .Call .main-btn {
+        width: 50%;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .Call .main-btn {
+        width: 30%;
+    }
+}
+@media (min-width: 992px) {
+    .Call .main-btn {
+        width: 42%;
+    }
+}
+/*End Call*/
