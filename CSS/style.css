@@ -121,6 +121,24 @@ video {
 .navy-btn::after {
     background-color: var(--Navy-color);
 }
+@media (max-width: 768px){
+    .view-btn {
+        width: 56%;
+        margin: 10px;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px){
+    .view-btn {
+        width: 30%;
+        margin: 0 20px;
+    }
+}
+@media (min-width: 992px) {
+    .view-btn {
+        width: 18%;
+        margin: 0 20px;
+    }
+}
 @media (max-width: 576px) {
     .info {
         padding: 50px 0;
@@ -312,7 +330,7 @@ nav .phone:focus{
 .Classes .card:hover::before {
     border: 2px solid var(--Blue-color);
     transform: translate(-1rem, 1rem);
-    box-shadow: 0 0rem 3rem rgba(0 0 0/0.175);
+    box-shadow: -0.25rem -0.25rem 1.5rem 0 rgba(0 0 0/0.175);
 }
 .Classes .card-body {
     margin-bottom: 40px;
@@ -486,24 +504,6 @@ nav .phone:focus{
     font-size: 14px;
     margin-bottom: 5px;
 }
-@media (max-width: 768px){
-    .Teachers .main-btn {
-        width: 56%;
-        margin: 10px;
-    }
-}
-@media (min-width: 768px) and (max-width: 992px){
-    .Teachers .main-btn {
-        width: 30%;
-        margin: 0 20px;
-    }
-}
-@media (min-width: 992px) {
-    .Teachers .main-btn {
-        width: 18%;
-        margin: 0 20px;
-    }
-}
 .Teachers .start {
     width: 70px;
 }
@@ -554,3 +554,29 @@ nav .phone:focus{
     }
 }
 /*End Call*/
+
+/*Start Blogs*/
+.Blogs .sub-tile {
+    margin-bottom: 50px;
+}
+.Blogs .card {
+    font-size: 15px;
+    transition: 0.3s;
+    margin-bottom: 40px;
+}
+.Blogs .card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0.5rem 1.5rem 0.175rem rgba(0 0 0 /.15);
+}
+.Blogs .card-img-top{
+    height: 295px;
+    object-fit: cover;
+}
+.Blogs .card span {
+    font-size: 12px;
+    color: var(--Blue-color);
+}
+.Blogs .start {
+    width: 70px;
+}
+/*End Blogs*/
