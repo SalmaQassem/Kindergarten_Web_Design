@@ -523,16 +523,14 @@ nav .phone:focus{
     color: var(--Orange-color);
 }
 .Call .sub-tile {
-    color: white;
     padding-bottom: 35px;
 }
 .Call .main-btn {
     border: 2px solid white;
-    color: white;
     background-color: var(--Navy-color);
 }
 .Call .main-btn:hover {
-    color: var(--Navy-color);
+    color: var(--Navy-color)!important;
     border-color: white;
 }
 .Call .main-btn::after {
@@ -567,6 +565,7 @@ nav .phone:focus{
 .Blogs .card:hover {
     transform: translateY(-6px);
     box-shadow: 0 0.5rem 1.5rem 0.175rem rgba(0 0 0 /.15);
+    border-bottom: 2px solid var(--Red-color)!important;
 }
 .Blogs .card-img-top{
     height: 295px;
@@ -580,3 +579,44 @@ nav .phone:focus{
     width: 70px;
 }
 /*End Blogs*/
+
+/*Start Subscribe*/
+.Subscribe .columns{
+    background-color: var(--Navy-color);
+}
+.Subscribe .call-img img {
+    transform: scale(0.9)translateX(5px);
+}
+.Subscribe form {
+    width: 62%;
+    margin-top: 25px;
+}
+.Subscribe .mail {
+    outline: none!important;
+    height: 42px;
+    padding: 20px;
+    border: 1px solid #ced4da;
+}
+.Subscribe .mail:focus{
+    border-color: #80bdff;
+}
+.Subscribe form a {
+    height: 42px;
+    width: 30%;
+    background-color: var(--Green-color);
+    top: 0;
+    right: -1px;
+}
+@media (max-width: 768px) {
+    .Subscribe form a {
+        width: 35%;
+    }
+}
+.Subscribe form a:hover,
+.Subscribe form a:focus{
+    background-color: var(--Red-color)!important;
+}
+.Subscribe .parents-img img {
+    transform: scale(0.9)translateX(-5px);
+}
+/*End Subscribe*/
