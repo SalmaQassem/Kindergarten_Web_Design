@@ -1,3 +1,6 @@
+html {
+    scroll-behavior: smooth;
+}
 body {
     font-family: "Roboto", sans-serif;
     color: #383838!important;
@@ -184,6 +187,7 @@ nav ul li {
 }
 nav ul li a {
     color: var(--Navy-color)!important;
+    cursor: pointer;
 }
 nav ul li a::after {
     content: "";
