@@ -4,7 +4,7 @@
 
 <p>This project is a multi-section web page for a Kindergarten.</p>
 
-##Languages and Frameworks
+## Languages and Frameworks
 
 - HTML.
 - CSS.
