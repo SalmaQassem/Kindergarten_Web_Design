@@ -7,6 +7,9 @@ window.addEventListener("beforeunload", function () {
         behavior: "smooth",
     });
 });
+if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+}
 
 /*Start Play Video Event Listener*/
 
